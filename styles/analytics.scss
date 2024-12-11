@@ -1,0 +1,186 @@
+.site__analytics {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+  padding-bottom: 1em;
+}
+.site__analytics__stats {
+  display: flex;
+  gap: 1em;
+  min-height: fit-content;
+}
+.site__analytics__stats__card {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--whiteShadow);
+  border-radius: 10px;
+  padding: 1em;
+  gap: 0.5em;
+  min-width: 200px;
+  cursor: grab;
+}
+.site__analytics__stats__card__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5em;
+}
+.site__analytics__stats__card__text__key {
+  font-size: 0.9em;
+}
+.site__analytics__stats__card__text__value {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+.site__analytics__stats__card__graph {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-size: 0.8em;
+}
+.graph__up {
+  color: #27c58a;
+}
+.graph__down {
+  color: #e9486b;
+}
+.graph__down .site__analytics__stats__card__graph__content svg {
+  transform: rotate(180deg);
+}
+.site__analytics__stats__card__graph__content {
+  display: flex;
+  align-items: center;
+}
+.site__analytics__chart {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  background-color: var(--whiteShadow);
+  border-radius: 10px;
+  padding: 1em;
+  box-shadow: var(--shadow);
+}
+.site__analytics__chart__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.site__analytics__chart__header__heading {
+  flex: 1;
+}
+.site__analytics__chart__header__actions {
+  max-width: fit-content;
+}
+.site__analytics__cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+.site__analytics__cards__card {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  background-color: var(--whiteShadow);
+  border-radius: 10px;
+  padding: 1em 0;
+  width: calc(33% - 0.5em);
+  gap: 0.5em;
+  box-shadow: var(--shadow);
+}
+.site__analytics__cards__card__body__table__body::-webkit-scrollbar-track {
+  background-color: var(--whiteShadow) !important;
+}
+.site__analytics__cards__card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5em;
+}
+.site__analytics__cards__card__header__title {
+  font-weight: 600;
+}
+.site__analytics__cards__card__header__action button {
+  background-color: var(--lightGrey);
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  border-radius: 10px;
+}
+.site__analytics__cards__card__header__action button:hover {
+  color: var(--golden);
+}
+.site__analytics__cards__card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.site__analytics__cards__card__body__table__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--lightGrey);
+  padding: 0.5em 1.5em;
+}
+.site__analytics__cards__card__body__table__body {
+  height: 250px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+.site__analytics__cards__card__body__table__body__empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.site__analytics__cards__card__body__table__body__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 1.5em;
+}
+.site__analytics__cards__card__body__table__body__row:hover {
+  background-color: var(--lightGrey);
+  cursor: pointer;
+}
+.site__analytics__cards__card__body__table__header__entry {
+  font-size: 14px;
+  width: 70px;
+  text-align: right;
+  font-weight: 600;
+}
+.site__analytics__cards__card__body__table__body__row__entry {
+  font-size: 12px;
+  width: 70px;
+  text-align: right;
+}
+.site__analytics__cards__card__body__table__header__entry:first-child,
+.site__analytics__cards__card__body__table__body__row__entry:first-child {
+  flex: 1;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+[lang="ar"] {
+  .site__analytics__cards__card__body__table__header__entry:first-child,
+  .site__analytics__cards__card__body__table__body__row__entry:first-child {
+    text-align: right;
+  }
+}
+@media (width < 1100px) {
+  .site__analytics__cards__card {
+    width: calc(50% - 0.5em);
+  }
+}
+@media (width < 550px) {
+  .site__analytics__cards__card {
+    width: 100%;
+  }
+}
