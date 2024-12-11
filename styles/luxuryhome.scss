@@ -1,0 +1,126 @@
+.luxury__home {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 4em 2em;
+  width: 100%;
+  gap: 2em;
+}
+.luxury__home__content {
+  display: flex;
+  justify-content: space-between;
+}
+.luxury__home__content__left__image {
+  position: relative;
+}
+.luxury__home__content__left__image__element {
+  position: absolute;
+  bottom: -87px;
+  right: -60%;
+  z-index: -1;
+  max-width: 450px !important;
+}
+.luxury__home__content__right {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.luxury__home__content__right__content {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #000;
+}
+[lang="ar"] {
+  .luxury__home__content__right__heading,
+  .luxury__home__content__right__content__info {
+    text-align: right;
+  }
+}
+.luxury__home__content__right__content h2 {
+  max-width: 650px;
+}
+.luxury__home__content__right__content p {
+  max-width: 650px;
+}
+.luxury__home__content__right__content__info {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #2c2c2c;
+}
+.heading {
+  max-width: 400px;
+}
+.luxury__home__content__right__content h2 {
+  font-size: 55px;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+.luxury__home__content__right__content p {
+  font-size: 18px;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 1.5em;
+}
+.luxury__home__content__right__content button {
+  background-color: var(--color-primary);
+  color: white;
+  height: 60px;
+  width: 265px;
+  border-radius: 30px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  cursor: pointer;
+}
+.form__content__right__button__link {
+  text-decoration: none;
+}
+.form__content__right__content__form__button__button {
+  background-color: #0c1f35 !important;
+  transition: all 0.3s ease-in-out;
+}
+.form__content__right__content__form__button__button:hover {
+  transform: scale(1.1) !important;
+  svg {
+    transform: rotate(225deg) !important;
+  }
+}
+@media (width < 1200px) {
+  .luxury__home__content__left__image__element {
+    display: none;
+  }
+}
+@media (width < 1000px) {
+  .luxury__home__content {
+    flex-direction: column;
+    gap: 2em;
+  }
+  .luxury__home__content__left,
+  .luxury__home__content__right {
+    width: 100%;
+  }
+  .luxury__home__content__right__content {
+    margin-bottom: 0;
+  }
+  .luxury__home__content__right__content p {
+    text-align: center;
+  }
+}
+@media (width < 768px) {
+  .luxury__home__content__left__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+@media (width < 500px) {
+  .luxury__home__content__right__content h2 {
+    font-size: 40px;
+  }
+}
