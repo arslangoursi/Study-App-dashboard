@@ -1,0 +1,112 @@
+.transaction__container {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  width: 100%;
+  padding-bottom: 1em;
+}
+.transaction__page__buttons {
+  display: flex;
+  width: 100%;
+  justify-content: right;
+}
+.transaction__page__buttons__entries {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.transaction__page__buttons__entries__green {
+  background-color: #11e22c;
+  color: white;
+  padding: 0.5em 2em;
+  border-radius: 50px;
+  box-shadow: var(--shadow);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  height: 38px;
+  white-space: nowrap;
+  line-height: 100%;
+  font-weight: 600;
+}
+.transaction__page__buttons__entries__green:hover {
+  background-color: #0ebd26;
+}
+.dashboard__transaction__entry__status__green {
+  background-color: #11e22d22;
+  color: #11e22c;
+  padding: 0.5em 2em;
+  border-radius: 50px;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  height: 38px;
+  white-space: nowrap;
+  line-height: 100%;
+}
+.transaction__page__buttons__entries__white {
+  background-color: var(--blue);
+  color: var(--white);
+  padding: 0.5em 2em;
+  border-radius: 50px;
+  box-shadow: var(--shadow);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  height: 38px;
+  white-space: nowrap;
+  line-height: 100%;
+  font-weight: 600;
+}
+.transaction__page__buttons__entries__white:hover {
+  background-color: var(--grey);
+  color: var(--blue);
+}
+.dashboard__transaction__entry__status__white {
+  background-color: var(--grey);
+  color: var(--blue);
+  padding: 0.5em 2em;
+  border-radius: 50px;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  height: 38px;
+  white-space: nowrap;
+  line-height: 100%;
+}
+.transaction__container__wraper {
+  display: flex;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--whiteShadow);
+  box-shadow: var(--shadow);
+  border-radius: 10px;
+  padding: 1.5em;
+  gap: 1em;
+  height: fit-content;
+}
+.transaction__container__wraper__heading {
+  display: flex;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--blue);
+  padding: 0 0 0.7em;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5em;
+}
+.dashboard__transaction__entries {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.3em;
+}

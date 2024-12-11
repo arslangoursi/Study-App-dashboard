@@ -1,0 +1,86 @@
+[
+  {
+    "logo": "/assets/northlogo.webp",
+    "banner": "/assets/northimg.webp",
+    "timeline": "2024",
+    "city": { "en": "Riyadh", "ar": "الرياض" }
+  },
+  {
+    "logo": "/assets/opallogo.webp",
+    "banner": "/assets/opal.webp",
+    "timeline": "2024",
+    "city": { "en": "Riyadh", "ar": "الرياض" }
+  },
+  {
+    "logo": "/assets/timelinelogo4.webp",
+    "banner": "/assets/timelinebanner4.webp",
+    "timeline": "2024",
+    "city": { "en": "Riyadh", "ar": "الرياض" }
+  },
+  {
+    "logo": "/assets/timelinelogo12.webp",
+    "banner": "/assets/timelinebanner12.webp",
+    "timeline": "2023",
+    "city": { "en": "Medina", "ar": "المدينة المنورة" }
+  },
+  {
+    "logo": "/assets/timelinelogo1.gif",
+    "banner": "/assets/timelinebanner1.gif",
+    "timeline": "2022",
+    "city": { "en": "Riyadh", "ar": "الرياض" }
+  },
+  {
+    "logo": "/assets/timelinelogo2.webp",
+    "banner": "/assets/timelinebanner2.webp",
+    "timeline": "2022",
+    "city": { "en": "Taif", "ar": "الطائف" }
+  },
+  {
+    "logo": "/assets/timelinelogo7.webp",
+    "banner": "/assets/timelinebanner7.webp",
+    "timeline": "2022",
+    "city": { "en": "Mecca", "ar": "مكة" }
+  },
+  {
+    "logo": "/assets/timelinelogo10.webp",
+    "banner": "/assets/timelinebanner10.webp",
+    "timeline": "2022",
+    "city": { "en": "Riyadh", "ar": "الرياض" }
+  },
+  {
+    "logo": "/assets/timelinelogo6.webp",
+    "banner": "/assets/timelinebanner6.webp",
+    "timeline": "2021",
+    "city": { "en": "Al-Qassim", "ar": "القصيم" }
+  },
+  {
+    "logo": "/assets/mchrlogo.webp",
+    "banner": "/assets/timelinebanner8.webp",
+    "timeline": "2020",
+    "city": { "en": "Mecca", "ar": "مكة" }
+  },
+  {
+    "logo": "/assets/alawlilogo.webp",
+    "banner": "/assets/timelinebanner9.webp",
+    "timeline": "2019",
+    "city": { "en": "Mecca", "ar": "مكة" }
+  },
+  {
+    "logo": "/assets/timelinelogo11.webp",
+    "banner": "/assets/timelinebanner11.webp",
+    "timeline": "2012",
+    "city": { "en": "Mecca", "ar": "مكة" }
+  },
+  {
+    "logo": "/assets/timelinelogo14.webp",
+    "banner": "/assets/timelinebanner14.webp",
+    "timeline": "2007",
+    "city": { "en": "Jeddah", "ar": "جدة" }
+  },
+  {
+    "logo": "/assets/timelinelogo13.webp",
+    "banner": "/assets/timelinebanner13.webp",
+    "timeline": "2005",
+    "city": { "en": "Jeddah", "ar": "جدة" }
+  }
+]

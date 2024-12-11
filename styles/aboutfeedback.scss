@@ -1,0 +1,103 @@
+.feedback__about__content {
+  display: flex;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 4em 2em;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+.feedback__about__content__swiper__content {
+  padding: 2em;
+}
+.feedback__about__content__swiper__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  font-style: italic;
+  font-size: 25px;
+  margin-bottom: 0.5em;
+  color: rgba(85, 85, 85, 1);
+}
+.feedback__about__content__swiper__info__name {
+  font-size: 18px;
+  margin-bottom: 0.2em;
+  font-weight: 700;
+  color: rgba(85, 85, 85, 1);
+}
+.feedback__about__content__swiper__info__position {
+  font-size: 16px;
+  color: rgba(85, 85, 85, 1);
+}
+.feedback__about__content__icon img {
+  width: 200px;
+}
+.feedback__navigation__hr {
+  margin-right: 2em;
+}
+.feedback__navigation__hr__line {
+  width: 1px;
+  height: 300px;
+  background-color: #b9b9b9;
+  margin: 20px 0;
+}
+.feedback__navigation__entry {
+  padding: 0.5em;
+  border-radius: 30px;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+  border: none;
+  margin-top: 2em;
+  border: #bcbcbc 1px solid;
+}
+.feedback__navigation__entry__svg {
+  color: #000;
+}
+.feedback__navigation__entry:hover {
+  transition: 300ms ease-in-out;
+  border: #000 px solid;
+}
+.feedback__navigation__entry:hover .feedback__navigation__entry__svg {
+  color: #444444;
+  transition: 300ms ease-in-out;
+}
+@media (max-width: 768px) {
+  .feedback__about__content {
+    flex-direction: column-reverse;
+  }
+  .feedback__navigation__hr__line {
+    display: none;
+  }
+  .feedback__navigation {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    width: 100%;
+  }
+  .feedback__swiper {
+    width: 100%;
+    min-height: 300px;
+  }
+  .feedback__about__content__swiper__content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+  .feedback__about__content__swiper__info {
+    width: 100%;
+    font-size: 16px;
+  }
+  .feedback__navigation__entry {
+    margin-top: 0;
+  }
+  .feedback__about__content {
+    padding: 2em 1em;
+  }
+}
