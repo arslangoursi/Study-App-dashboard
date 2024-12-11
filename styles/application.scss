@@ -1,0 +1,290 @@
+.application__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+  padding-bottom: 1em;
+}
+.application__container__btn {
+  display: flex;
+  width: 100%;
+  justify-content: right;
+}
+.application__container__btn__entries {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.application__container__btn__entries__green {
+  background-color: #11e22c;
+  color: white;
+  padding: 0.5em 2em;
+  border-radius: 50px;
+  box-shadow: var(--shadow);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  height: 38px;
+  white-space: nowrap;
+  line-height: 100%;
+  font-weight: 600;
+}
+.application__container__btn__entries__green:hover {
+  background-color: #0ebd26;
+}
+.application__container__btn__entries__blue {
+  background-color: #118be2;
+  color: white;
+  padding: 0.5em 2em;
+  border-radius: 50px;
+  box-shadow: var(--shadow);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  height: 38px;
+  white-space: nowrap;
+  line-height: 100%;
+  font-weight: 600;
+}
+.application__container__btn__entries__blue:hover {
+  background-color: #0d76c2;
+}
+.application__container__btn__entries__white {
+  background-color: var(--blue);
+  color: var(--white);
+  padding: 0.5em 2em;
+  border-radius: 50px;
+  box-shadow: var(--shadow);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  height: 38px;
+  white-space: nowrap;
+  line-height: 100%;
+  font-weight: 600;
+}
+.application__container__btn__entries__white:hover {
+  background-color: var(--grey);
+  color: var(--blue);
+}
+.application__container__btn__entries__gold {
+  background-color: var(--golden);
+  color: black;
+  padding: 0.5em 2em;
+  border-radius: 50px;
+  box-shadow: var(--shadow);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  height: 38px;
+  white-space: nowrap;
+  line-height: 100%;
+  font-weight: 600;
+  text-decoration: none;
+}
+.application__container__btn__entries__gold:hover {
+  background-color: var(--goldenDark);
+}
+.application__container__box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--whiteShadow);
+  box-shadow: var(--shadow);
+  border-radius: 10px;
+  padding: 1.5em 2em 2em;
+  gap: 1em;
+  height: fit-content;
+}
+.application__container__box__heading {
+  display: flex;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--blue);
+  padding: 0 0 0.7em;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5em;
+}
+.application__container__box__details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.3em;
+}
+.application__container__entry__status__green {
+  background-color: #11e22d22;
+  color: #11e22c;
+  padding: 0.5em 2em;
+  border-radius: 50px;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  height: 38px;
+  white-space: nowrap;
+  line-height: 100%;
+}
+.application__container__entry__status__blue {
+  background-color: #118be223;
+  color: #118be2;
+  padding: 0.5em 2em;
+  border-radius: 50px;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  height: 38px;
+  white-space: nowrap;
+  line-height: 100%;
+}
+.application__container__entry__status__white {
+  background-color: var(--grey);
+  color: var(--blue);
+  padding: 0.5em 2em;
+  border-radius: 50px;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  height: 38px;
+  white-space: nowrap;
+  line-height: 100%;
+}
+.application__container__bottom {
+  display: flex;
+  width: 100%;
+}
+.application__container__reminders {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--whiteShadow);
+  box-shadow: var(--shadow);
+  max-width: 600px;
+  border-radius: 10px;
+  padding: 1.5em;
+  gap: 1.5em;
+}
+.application__container__reminders__header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.application__container__reminders__header__heading {
+  display: flex;
+  flex: 1;
+  font-size: 1em;
+  color: var(--blue);
+  font-weight: bold;
+}
+.application__container__reminders__header__btn {
+  display: flex;
+  padding: 0.7em 2em;
+  border-radius: 10px;
+  background-color: var(--golden);
+  color: black;
+  outline: none;
+  border: 1px solid transparent;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 100px;
+}
+.application__container__reminders__header__btn:hover {
+  background-color: transparent;
+  color: var(--golden);
+  border: 1px solid var(--golden);
+}
+.application__container__reminders__info {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.application__container__reminders__info__navigation {
+  display: flex;
+  width: 100%;
+  gap: 1em;
+  align-items: center;
+}
+.application__container__reminders__info__navigation__entry {
+  display: flex;
+  padding: 0 1.5em;
+  color: var(--blue);
+  border-radius: 100px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  height: 30px;
+  font-size: 0.9em;
+}
+.application__container__reminders__info__navigation__entry:hover {
+  background-color: var(--blue);
+  color: var(--white);
+}
+.application__container__reminders__info__navigation__entry__active {
+  display: flex;
+  padding: 0 1.5em;
+  background-color: var(--blue);
+  color: var(--white);
+  border-radius: 100px;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9em;
+  height: 30px;
+}
+.application__container__reminders__info__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+}
+.application__container__reminders__info__view {
+  display: flex;
+  font-size: 0.9em;
+  font-weight: 500;
+  text-decoration: underline;
+  color: var(--blue);
+  margin: 0 auto;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-top: 1em;
+}
+.application__container__reminders__info__view:hover {
+  color: var(--golden);
+}
+.application__container__table {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.application__container__table__header {
+  display: flex;
+  flex: 1;
+  font-size: 1.2em;
+  color: var(--blue);
+  font-weight: bold;
+}
+@media (max-width: 1020px) {
+  .application__container__btn__entries__gold,
+  .application__container__btn__entries__green,
+  .application__container__btn__entries__blue,
+  .application__container__btn__entries__white {
+    flex: 1;
+    justify-content: center;
+  }
+  .application__container__box {
+    padding: 1.5em 1.5em 2em;
+  }
+  .application__container__reminders {
+    padding: 1.5em;
+  }
+}

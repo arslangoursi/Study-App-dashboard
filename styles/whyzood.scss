@@ -1,0 +1,74 @@
+.WhyZood {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4em 20px;
+  box-sizing: border-box;
+}
+.WhyZood__content__heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 55px;
+  color: #000;
+  margin-bottom: 20px;
+}
+.WhyZood__content__cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.WhyZood__content__cards__card__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 350px;
+  height: 400px;
+  gap: 10px;
+  padding: 5em 2em;
+  box-sizing: border-box;
+  border-radius: 30px;
+  background-color: #ffffff;
+  transition: ease-in-out 0.3s;
+  cursor: pointer;
+}
+.WhyZood__content__cards__card__content__heading {
+  font-size: 22px;
+  font-weight: 700;
+  color: #000;
+}
+.WhyZood__content__cards__card__content__info {
+  font-size: 16px;
+  color: #3b4c55;
+  text-align: center;
+}
+.WhyZood__content__cards__card__content:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(125deg, #7698b2 19.39%, #0c1f35 106.49%);
+  color: #fff;
+  transition: ease-in-out 0.3s;
+}
+.WhyZood__content__cards__card__content:hover
+  .WhyZood__content__cards__card__content__heading {
+  color: #fff;
+}
+.WhyZood__content__cards__card__content:hover
+  .WhyZood__content__cards__card__content__info {
+  color: #fff;
+}
+.WhyZood__content__cards__card__content:hover
+  .WhyZood__content__cards__card__content__svg
+  svg
+  * {
+  fill: #fff;
+}
+.WhyZood__content__cards__card:nth-child(2)
+  .WhyZood__content__cards__card__content {
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,212 @@
+.map__maker__overlay__warper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1em;
+  position: relative;
+}
+.map__maker__overlay__warper img {
+  height: 70px;
+  width: 80px;
+  object-fit: contain;
+}
+.map__zood__img {
+  background-color: white;
+  padding: 0.5em;
+  border-radius: 120px;
+  border: 1px solid #ec942a;
+}
+.map__maker__overlay {
+  position: absolute;
+  width: 100%;
+  min-width: 300px;
+  top: -180px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1.5em;
+  background-color: white;
+  border-radius: 12px;
+  flex-direction: column;
+  z-index: 999999;
+}
+.map__maker__overlay__content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.map__maker__overlay__header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #e6e6e6;
+}
+.map__maker__overlay__col {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  justify-content: flex-start;
+}
+.map__maker__overlay__col__img img {
+  width: 80px;
+  object-fit: contain;
+}
+.map__maker__overlay__content__title {
+  font-size: 1em;
+  font-weight: 600;
+}
+.map__maker__overlay__content__subtitle {
+  font-size: 0.8em;
+  font-weight: 500;
+  color: #868f98;
+}
+.map__location__warper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2em;
+  padding: 1em 0;
+}
+.map__location__col {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.map__location__col__title {
+  font-size: 1em;
+  font-weight: 400;
+}
+.map__location__col__subtitle {
+  font-size: 0.9em;
+  color: #7d7d8ba6;
+}
+.map__sidebar__btn {
+  position: absolute;
+  top: 90px;
+  left: 10px;
+  background-color: #ec942a;
+  height: 40px;
+  width: 40px;
+  border-radius: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.map__overlay__left {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1em;
+  padding: 1.5em;
+  background-color: white;
+  flex-direction: column;
+  border-radius: 12px;
+  position: relative;
+  margin-top: 7em;
+  height: calc(92dvh - 5em - 12px);
+  overflow-y: auto;
+  gap: 1em;
+  z-index: 99;
+}
+.map__overlay__left__header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #e6e6e6;
+}
+.map__overlay__left__header__title__text {
+  font-size: 1.4em;
+  font-weight: 700;
+}
+.map__overlay__left__header__close {
+  font-size: 1em;
+  font-weight: 600;
+  color: #ec942a;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+.map__overlay__cards__container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1em;
+  padding: 1em;
+  background-color: white;
+  flex-direction: column;
+  border-radius: 12px;
+  gap: 1em;
+}
+.map__card {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 0.5em;
+  padding: 1em;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow:
+    rgba(0, 0, 0, 0.1) 0 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0 2px 4px -1px;
+  width: 100%;
+}
+.map__card__image {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.map__card__image img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.map__card__content {
+  width: 100%;
+  padding: 1em;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5em;
+}
+.map__card__content__location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  font-size: 0.9em;
+}
+.map__card__content__col {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.map__card__content__title {
+  font-size: 1em;
+  font-weight: 600;
+}
+.map__card__content__text {
+  font-size: 1em;
+  color: #7d7d8ba6;
+}

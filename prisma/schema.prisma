@@ -1,0 +1,699 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+generator typescriptInterfaces {
+  provider = "prisma-generator-typescript-interfaces"
+  output   = "./interfaces.ts"
+}
+
+enum Status {
+  ACTIVE
+  INACTIVE
+}
+
+type UserContract {
+  salary             Float
+  startDate          DateTime
+  endDate            DateTime?
+  wage               Float
+  houseAllowance     Float
+  transportAllowance Float
+  otherAllowance     Float
+  otherDeduction     Float
+}
+
+model User {
+  id                   String                @id @default(cuid()) @map("_id")
+  number               String
+  name                 String?
+  email                String                @unique
+  picture              String?
+  phone                String                @unique
+  isPhoneVerified      Boolean
+  password             String?
+  designation          String?
+  department           String?
+  workPhone            String?
+  workEmail            String?
+  workAddress          String?
+  bankAccount          String?
+  dateOfBirth          DateTime?
+  otp                  String?
+  otpExpiredAt         DateTime?
+  contract             UserContract?
+  documents            String[]
+  hasContentEditAccess Boolean               @default(false)
+  status               Status                @default(ACTIVE)
+  placeInHierarchy     String
+  isDeleted            Boolean               @default(false)
+  deletedAt            DateTime?
+  createdAt            DateTime              @default(now())
+  updatedAt            DateTime              @updatedAt
+  projects             Project[]
+  maps                 Map[]
+  lands                Land[]
+  apartments           Apartment[]
+  applications         Application[]
+  applicationReminders ApplicationReminder[]
+  customerReminders    CustomerReminder[]
+  changeLogs           ChangeLog[]
+  notifications        Notification[]
+  userExperiences      UserExperience[]
+  userQualifications   UserQualification[]
+  userFamily           UserFamily[]
+  Referral             Referral[]
+  Customer             Customer[]
+  Transaction          Transaction[]
+  SiteContentProject   SiteContentProject[]
+}
+
+model UserExperience {
+  id          String    @id @default(cuid()) @map("_id")
+  user        User      @relation(fields: [userId], references: [id])
+  userId      String
+  title       String
+  company     String
+  location    String
+  startDate   DateTime
+  endDate     DateTime?
+  description String
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model UserQualification {
+  id          String    @id @default(cuid()) @map("_id")
+  user        User      @relation(fields: [userId], references: [id])
+  userId      String
+  title       String
+  institute   String
+  location    String
+  startDate   DateTime
+  endDate     DateTime?
+  description String
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model UserFamily {
+  id          String   @id @default(cuid()) @map("_id")
+  user        User     @relation(fields: [userId], references: [id])
+  userId      String
+  name        String
+  relation    String
+  dateOfBirth DateTime
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+enum LogActionType {
+  CREATE
+  UPDATE
+  DELETE
+}
+
+model ChangeLog {
+  id          String         @id @default(cuid()) @map("_id")
+  userId      String
+  user        User           @relation(fields: [userId], references: [id])
+  url         String
+  description LocalizedValue
+  createdAt   DateTime       @default(now())
+}
+
+model Notification {
+  id          String   @id @default(cuid()) @map("_id")
+  title       String
+  description String
+  type        String
+  user        User     @relation(fields: [userId], references: [id])
+  userId      String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+type BankingDetails {
+  inUse    Boolean
+  bankName String
+  iban     String
+}
+
+enum CustomerType {
+  INDIVIDUAL
+  COMPANY
+}
+
+model Customer {
+  id                String             @id @default(cuid()) @map("_id")
+  number            String
+  name              String?
+  email             String             @unique
+  isEmailVerified   Boolean            @default(false)
+  picture           String?
+  address           String?
+  city              String?
+  country           String?
+  zipCode           String?
+  phone             String             @unique
+  isPhoneVerified   Boolean            @default(false)
+  password          String?
+  company           String?
+  type              CustomerType       @default(INDIVIDUAL)
+  tags              String[]
+  language          String?
+  otp               String?
+  otpExpiredAt      DateTime?
+  website           String?
+  taxNumber         String?
+  idNumber          String?
+  nationality       String?
+  notes             String?
+  bankingDetails    BankingDetails?
+  isDeleted         Boolean            @default(false)
+  deletedAt         DateTime?
+  updatedBy         User?              @relation(fields: [updatedById], references: [id])
+  updatedById       String?
+  status            Status             @default(ACTIVE)
+  isSeller          Boolean            @default(false)
+  createdAt         DateTime           @default(now())
+  updatedAt         DateTime           @updatedAt
+  verifications     Verification[]
+  ownerships        Ownership[]
+  applications      Application[]
+  customerReminders CustomerReminder[]
+  invoices          Invoice[]
+  transactions      Transaction[]
+}
+
+model CustomerReminder {
+  id          String   @id @default(cuid()) @map("_id")
+  customer    Customer @relation(fields: [customerId], references: [id])
+  customerId  String
+  title       String
+  description String
+  reminderAt  DateTime
+  isDone      Boolean  @default(false)
+  user        User     @relation(fields: [userId], references: [id])
+  userId      String
+  files       String[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+enum VerificationType {
+  EMAIL
+  PHONE
+}
+
+model Verification {
+  id         String           @id @default(cuid()) @map("_id")
+  customer   Customer         @relation(fields: [customerId], references: [id])
+  customerId String
+  type       VerificationType @default(EMAIL)
+  otp        String
+  expiredAt  DateTime
+  createdAt  DateTime         @default(now())
+  updatedAt  DateTime         @updatedAt
+}
+
+model Referral {
+  id                String              @id @default(cuid()) @map("_id")
+  number            String
+  name              String?
+  expiredAt         DateTime?
+  createdBy         User                @relation(fields: [createdById], references: [id])
+  createdById       String
+  isDeleted         Boolean             @default(false)
+  deletedAt         DateTime?
+  createdAt         DateTime            @default(now())
+  updatedAt         DateTime            @updatedAt
+  referralAnalytics ReferralAnalytics[]
+}
+
+model ReferralAnalytics {
+  id               String   @id @default(cuid()) @map("_id")
+  referral         Referral @relation(fields: [referralId], references: [id])
+  referralId       String
+  ipAddress        String
+  browser          String
+  os               String
+  language         String
+  country          String
+  region           String
+  city             String
+  screenResolution String
+  timezone         String
+  cookiesEnabled   Boolean
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+}
+
+model Analytics {
+  id               String   @id @default(cuid()) @map("_id")
+  path             String
+  ipAddress        String
+  browser          String
+  os               String
+  language         String
+  country          String
+  region           String
+  city             String
+  screenResolution String
+  timezone         String
+  cookiesEnabled   Boolean
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+}
+
+type LocalizedValue {
+  en String?
+  ar String?
+}
+
+model Project {
+  id             String          @id @default(cuid()) @map("_id")
+  number         String
+  name           LocalizedValue?
+  area           String?
+  city           LocalizedValue?
+  description    LocalizedValue?
+  timeline       String?
+  primaryColor   String?
+  secondaryColor String?
+  logo           LocalizedValue?
+  logoIcon       String?
+  banner         String?
+  visible        Boolean         @default(true)
+  user           User            @relation(fields: [userId], references: [id])
+  userId         String
+  isDeleted      Boolean         @default(false)
+  deletedAt      DateTime?
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+  maps           Map[]
+  lands          Land[]
+  apartments     Apartment[]
+  applications   Application[]
+  Asset3d        Asset3d[]
+}
+
+model Asset3d {
+  id        String          @id @default(cuid()) @map("_id")
+  number    String
+  project   Project         @relation(fields: [projectId], references: [id])
+  projectId String
+  name      LocalizedValue?
+  files     String[]
+  link360   String?         @default("")
+  createdAt DateTime        @default(now())
+  updatedAt DateTime        @updatedAt
+  Apartment Apartment[]
+}
+
+enum MapType {
+  LAND
+  APARTMENT
+}
+
+model Map {
+  id                    String           @id @default(cuid()) @map("_id")
+  project               Project          @relation(fields: [projectId], references: [id])
+  projectId             String
+  number                String
+  name                  LocalizedValue?
+  area                  Float?
+  description           LocalizedValue?
+  logoIcon              String?
+  backgroundImage       String?
+  backgroundImageMobile String?
+  type                  MapType          @default(LAND)
+  geoJson               String?
+  model                 String?
+  latitude              Float?
+  longitude             Float?
+  dayStills             String[]
+  nightStills           String[]
+  user                  User             @relation(fields: [userId], references: [id])
+  userId                String
+  tokenPrice            Float?
+  visible               Boolean          @default(true)
+  isDeleted             Boolean          @default(false)
+  deletedAt             DateTime?
+  createdAt             DateTime         @default(now())
+  updatedAt             DateTime         @updatedAt
+  lands                 Land[]
+  apartments            Apartment[]
+  applications          Application[]
+  developments          MapDevelopment[]
+}
+
+model MapDevelopment {
+  id          String    @id @default(cuid()) @map("_id")
+  title       String
+  description String
+  files       String[]
+  isDone      Boolean   @default(false)
+  startedAt   DateTime?
+  expectedAt  DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  Map         Map?      @relation(fields: [mapId], references: [id])
+  mapId       String?
+}
+
+enum PropertyStatus {
+  NOT_SELLABLE
+  AVAILABLE
+}
+
+model Ownership {
+  id          String         @id @default(cuid()) @map("_id")
+  owner       Customer?      @relation(fields: [ownerId], references: [id])
+  ownerId     String?
+  ownerByName String?
+  unitPrice   Float?         @default(0)
+  status      PropertyStatus @default(AVAILABLE)
+  apartment   Apartment?     @relation(fields: [apartmentId], references: [id])
+  apartmentId String?
+  land        Land?          @relation(fields: [landId], references: [id])
+  landId      String?
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
+}
+
+model Apartment {
+  id                      String          @id @default(cuid()) @map("_id")
+  number                  String
+  project                 Project         @relation(fields: [projectId], references: [id])
+  projectId               String
+  map                     Map             @relation(fields: [mapId], references: [id])
+  mapId                   String
+  images                  String[]
+  pdfs                    String[]
+  tower                   String
+  floor                   String
+  unit                    String
+  unitType                LocalizedValue?
+  area                    Float?
+  balconyArea             Float?
+  roofArea                Float?
+  parkingArea             Float?
+  unitAreaWithAttachments Float?
+  numberOfBedrooms        Int?
+  numberOfBathrooms       Int?
+  numberOfGardens         Int?
+  numberOfBalconies       Int?
+  numberOfParking         Int?
+  unitShareOfLand         Float?
+  unitShareOfCommonArea   Float?
+  notes                   String?
+  user                    User            @relation(fields: [userId], references: [id])
+  userId                  String
+  owners                  Ownership[]
+  asset3d                 Asset3d?        @relation(fields: [asset3dId], references: [id])
+  asset3dId               String?
+  createdAt               DateTime        @default(now())
+  updatedAt               DateTime        @updatedAt
+}
+
+type NearByFacilitiesDistance {
+  university           Float?
+  highSchool           Float?
+  elementarySchool     Float?
+  mosque               Float?
+  publicPark           Float?
+  healthCenter         Float?
+  hospital             Float?
+  shoppingCenter       Float?
+  culturalCenter       Float?
+  museum               Float?
+  library              Float?
+  sportHall            Float?
+  playground           Float?
+  publicRestaurant     Float?
+  socialCenter         Float?
+  artsAndTheaterCenter Float?
+  publicTransportation Float?
+  trainingCenter       Float?
+  childrenPlayArea     Float?
+  elderlyCenter        Float?
+  commercialMarket     Float?
+  waterSportFacility   Float?
+  petCareCenter        Float?
+  policeStation        Float?
+  fireStation          Float?
+  ambulanceStation     Float?
+  immigrationOffice    Float?
+  civilRegistryOffice  Float?
+}
+
+type Lenghts {
+  north Float?
+  south Float?
+  east  Float?
+  west  Float?
+}
+
+model Land {
+  id                       String                   @id @default(cuid()) @map("_id")
+  number                   String
+  project                  Project                  @relation(fields: [projectId], references: [id])
+  projectId                String
+  map                      Map                      @relation(fields: [mapId], references: [id])
+  mapId                    String
+  plot                     String
+  dimensions               String?
+  images                   String[]
+  pdfs                     String[]
+  mapLink                  String?
+  area                     Float?
+  block                    String?
+  orientation              LocalizedValue?
+  purpose                  LocalizedValue?
+  unitType                 LocalizedValue?
+  lengths                  Lenghts
+  roadWidths               Float[]
+  nearByFacilitiesDistance NearByFacilitiesDistance
+  user                     User                     @relation(fields: [userId], references: [id])
+  userId                   String
+  createdAt                DateTime                 @default(now())
+  updatedAt                DateTime                 @updatedAt
+  owners                   Ownership[]
+}
+
+enum ApplicationStatus {
+  NEW
+  PENDING
+  ON_HOLD
+  CANCELLED
+  PURCHASED
+}
+
+enum TransactionStatus {
+  PENDING
+  APPROVED
+  DECLINED
+}
+
+enum MeetingStatus {
+  PENDING
+  DONE
+}
+
+model Application {
+  id                       String                @id @default(cuid()) @map("_id")
+  number                   String
+  customer                 Customer              @relation(fields: [customerId], references: [id])
+  customerId               String
+  project                  Project               @relation(fields: [projectId], references: [id])
+  projectId                String
+  map                      Map                   @relation(fields: [mapId], references: [id])
+  mapId                    String
+  status                   ApplicationStatus
+  reasonForCancellation    String?
+  message                  String?
+  actionBy                 User?                 @relation(fields: [actionById], references: [id])
+  actionById               String?
+  firstActionAt            DateTime?
+  lastActionAt             DateTime?
+  purchaseAt               DateTime?
+  amount                   Float                 @default(0)
+  purchaseNote             String?
+  gatewayTransactionId     String?
+  gatewayTransactionAmount Float?
+  gatewayTransactionAt     DateTime?
+  gatewayTransactionStatus TransactionStatus?
+  reservedTill             DateTime?             @default(now())
+  meetingAt                DateTime?
+  meetingNote              String?
+  meetingLocation          String?
+  meetingStatus            MeetingStatus?
+  isDeleted                Boolean               @default(false)
+  deletedAt                DateTime?
+  createdAt                DateTime              @default(now())
+  updatedAt                DateTime              @updatedAt
+  applicationReminders     ApplicationReminder[]
+  applicationSelected      ApplicationSelected[]
+  invoices                 Invoice[]
+}
+
+model ApplicationSelected {
+  id            String       @id @default(cuid()) @map("_id")
+  propertyType  String
+  propertyId    String
+  files         String[]
+  createdAt     DateTime     @default(now())
+  updatedAt     DateTime     @updatedAt
+  application   Application? @relation(fields: [applicationId], references: [id])
+  applicationId String?
+}
+
+model ApplicationReminder {
+  id            String      @id @default(cuid()) @map("_id")
+  application   Application @relation(fields: [applicationId], references: [id])
+  applicationId String
+  title         String
+  description   String
+  reminderAt    DateTime
+  isDone        Boolean     @default(false)
+  user          User        @relation(fields: [userId], references: [id])
+  userId        String
+  files         String[]
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+}
+
+type InvoiceProperty {
+  propertyId String
+  amount     Float
+}
+
+enum InvoiceType {
+  OWNER
+  GOVERNMENT
+  GATEWAY
+}
+
+model Invoice {
+  id            String            @id @default(cuid()) @map("_id")
+  number        String
+  customer      Customer          @relation(fields: [customerId], references: [id])
+  customerId    String
+  application   Application       @relation(fields: [applicationId], references: [id])
+  applicationId String
+  properties    InvoiceProperty[]
+  amount        Float
+  dueAt         DateTime
+  paidAt        DateTime?
+  paidAmount    Float             @default(0)
+  type          InvoiceType       @default(OWNER)
+  viewedAt      DateTime?
+  createdAt     DateTime          @default(now())
+  updatedAt     DateTime          @updatedAt
+  transactions  Transaction[]
+}
+
+model Transaction {
+  id               String            @id @default(cuid()) @map("_id")
+  number           String
+  customer         Customer          @relation(fields: [customerId], references: [id])
+  customerId       String
+  invoice          Invoice           @relation(fields: [invoiceId], references: [id])
+  invoiceId        String
+  propertyId       String?
+  amount           Float
+  status           TransactionStatus
+  reasonForDecline String?
+  file             String?
+  actionBy         User?             @relation(fields: [actionById], references: [id])
+  actionById       String?
+  showTo           String[]
+  actionAt         DateTime?
+  createdAt        DateTime          @default(now())
+  updatedAt        DateTime          @updatedAt
+}
+
+model Interest {
+  id        String   @id @default(cuid()) @map("_id")
+  name      String?
+  email     String?
+  phone     String?
+  interest  String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model MarketingInterest {
+  id         String   @id @default(cuid()) @map("_id")
+  name       String?
+  phone      String?
+  email      String?
+  sex        String?
+  city       String?
+  specialty  String?
+  bio        String?
+  hasLicense Boolean?
+  license    String?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model NewsLetter {
+  id        String   @id @default(cuid()) @map("_id")
+  email     String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model CallScheduled {
+  id                     String   @id @default(cuid()) @map("_id")
+  name                   String?
+  email                  String?
+  phone                  String?
+  timeSlot               String?
+  preferredContactMethod String?
+  isDone                 Boolean  @default(false)
+  createdAt              DateTime @default(now())
+  updatedAt              DateTime @updatedAt
+}
+
+model QrScanned {
+  id        String   @id @default(cuid()) @map("_id")
+  value     String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+enum SiteContentProjectStatus {
+  ON_SALE
+  SOLD_OUT
+  COMING_SOON
+}
+
+model SiteContentProject {
+  id             String                   @id @default(cuid()) @map("_id")
+  number         String
+  name           LocalizedValue?
+  logo           LocalizedValue?
+  description    LocalizedValue?
+  city           LocalizedValue?
+  area           Float
+  numberOfEntity Int?
+  nameOfEntity   LocalizedValue?
+  banner         String?
+  picture        String?
+  slides         String[]
+  status         SiteContentProjectStatus @default(ON_SALE)
+  visible        Boolean                  @default(true)
+  actionBy       User                     @relation(fields: [actionById], references: [id])
+  actionById     String
+  isDeleted      Boolean                  @default(false)
+  createdAt      DateTime                 @default(now())
+  updatedAt      DateTime                 @updatedAt
+}

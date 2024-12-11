@@ -1,0 +1,474 @@
+{
+  "projects": [
+    { "key": "number", "name": "Number", "nameAr": "الرقم التسلسلي " },
+    {
+      "key": "name",
+      "name": "Name",
+      "nameAr": "اسم المشروع",
+      "hasImage": true
+    },
+    { "key": "area", "name": "Area", "nameAr": " إجمالي المساحة" },
+    { "key": "city", "name": "City", "nameAr": "المدينة" },
+    { "key": "status", "name": "Visibility", "nameAr": " الحالة" },
+    { "key": "completion", "name": "Completion", "nameAr": "تاريخ الانتهاء" },
+    {
+      "key": "last updated by",
+      "name": "Last Updated By",
+      "nameAr": "آخر تحديث بواسطة"
+    },
+    {
+      "key": "last updated date",
+      "name": "Last Updated Date",
+      "nameAr": "تاريخ آخر تحديث"
+    }
+  ],
+  "maps": [
+    { "key": "number", "name": "Map Number", "nameAr": "الرقم التسلسلي " },
+    {
+      "key": "name",
+      "name": "Map Name",
+      "nameAr": "اسم المشروع",
+      "hasImage": true
+    },
+    { "key": "type", "name": "Map Type", "nameAr": "الوحدات" },
+    { "key": "status", "name": "Visibility", "nameAr": "الحالة" },
+    { "key": "completion", "name": "Completion", "nameAr": "تاريخ الانتهاء" },
+    {
+      "key": "last updated by",
+      "name": "Last Updated By",
+      "nameAr": "آخر تحديث بواسطة"
+    },
+    {
+      "key": "last updated date",
+      "name": "Last Updated Date",
+      "nameAr": "تاريخ آخر تحديث"
+    }
+  ],
+  "projectRoomsAssign": [
+    { "key": "map", "name": "Map Name", "nameAr": "اسم الخريطة" },
+    { "key": "floor", "name": "Floor", "nameAr": "الطابق" },
+    { "key": "unit", "name": "Unit", "nameAr": "الوحدة" },
+    { "key": "status", "name": "Status", "nameAr": "الحالة" }
+  ],
+  "projectRooms": [
+    {
+      "key": "number",
+      "name": "Room Number",
+      "nameAr": "رقم الغرفة"
+    },
+    {
+      "key": "name",
+      "name": "Room Name",
+      "nameAr": "اسم الغر فة"
+    },
+    {
+      "key": "noOfFiles",
+      "name": "Number of Files",
+      "nameAr": "عدد الملفات"
+    },
+    {
+      "key": "link360",
+      "name": "360 Link",
+      "nameAr": "360 رابط"
+    },
+    {
+      "key": "createdAt",
+      "name": "Created At",
+      "nameAr": "تاريخ الإنشاء"
+    },
+    {
+      "key": "updatedAt",
+      "name": "Updated At",
+      "nameAr": "تاريخ التحديث"
+    }
+  ],
+  "propertiesFloors": [
+    { "key": "number", "name": "Property Number", "nameAr": "كود الوحدة" },
+    { "key": "floor", "name": "Floor Level", "nameAr": " الدور" },
+    { "key": "area", "name": "Area", "nameAr": "المساحة (قدم مربع)" },
+    {
+      "key": "status",
+      "name": "Availability Status",
+      "nameAr": " حالة الوحدة"
+    },
+    {
+      "key": "numberOfBedrooms",
+      "name": "Number of Rooms",
+      "nameAr": "عدد الغرف"
+    },
+    { "key": "parkingArea", "name": "Parking Area", "nameAr": "مساحة الوقوف" },
+    {
+      "key": "balconyArea",
+      "name": "Balcony Area",
+      "nameAr": "مساحة البلكونة"
+    },
+    { "key": "roofArea", "name": "Roof Area", "nameAr": "مساحة السطح" },
+    { "key": "created at", "name": "Created At", "nameAr": "تاريخ الانشاء" },
+    {
+      "key": "last updated date",
+      "name": "Last Updated Date",
+      "nameAr": "تاريخ آخر تحديث"
+    }
+  ],
+  "propertiesPlots": [
+    { "key": "number", "name": "Property Number", "nameAr": "كود الوحدة" },
+    { "key": "plot", "name": "Plot Number", "nameAr": "رقم القطعة" },
+    { "key": "area", "name": "Area", "nameAr": "المساحة (قدم مربع)" },
+    {
+      "key": "status",
+      "name": "Availability Status",
+      "nameAr": "حالة التوافر"
+    },
+    { "key": "block", "name": "Block Number", "nameAr": "رقم البلك" },
+    {
+      "key": "createdAt",
+      "name": "Last Updated By",
+      "nameAr": "آخر تحديث بواسطة"
+    },
+    {
+      "key": "updatedAt",
+      "name": "Last Updated Date",
+      "nameAr": "تاريخ آخر تحديث"
+    }
+  ],
+  "customers": [
+    {
+      "key": "name",
+      "name": "Customer Name",
+      "nameAr": "اسم العميل",
+      "hasImage": true
+    },
+    {
+      "key": "email",
+      "name": "Email Address",
+      "nameAr": "عنوان البريد الإلكتروني",
+      "style": { "width": "300px" }
+    },
+    {
+      "key": "phone",
+      "name": "Phone Number",
+      "nameAr": "رقم الجوال بدلا من التليفون"
+    },
+    { "key": "type", "name": "Customer Type", "nameAr": "نوع العميل" },
+    { "key": "tags", "name": "Tags", "nameAr": "الكلمات الدلالية" },
+    { "key": "spent", "name": "Total Spent", "nameAr": "إجمالي الإنفاق" },
+    { "key": "bought", "name": "Total Bought", "nameAr": "إجمالي المشتريات" },
+    { "key": "status", "name": "Account Status", "nameAr": "حالة الحساب" },
+    {
+      "key": "last updated by",
+      "name": "Last Updated By",
+      "nameAr": "آخر تحديث بواسطة"
+    },
+    {
+      "key": "last updated date",
+      "name": "Last Updated Date",
+      "nameAr": "تاريخ آخر تحديث"
+    }
+  ],
+  "customersPlots": [
+    { "key": "project", "name": "Project Name", "nameAr": "اسم المشروع" },
+    { "key": "map", "name": "Map Name", "nameAr": " اسم المشروع" },
+    { "key": "properties", "name": "Properties", "nameAr": "عدد الملكيات" },
+    { "key": "total", "name": "Total Amount", "nameAr": "المبلغ الإجمالي" },
+    { "key": "remain", "name": "Remaining Amount", "nameAr": "المبلغ المتبقي" },
+    { "key": "status", "name": "Payment Status", "nameAr": "حالة الدفع" },
+    {
+      "key": "last updated by",
+      "name": "Last Updated By",
+      "nameAr": "آخر تحديث بواسطة"
+    },
+    {
+      "key": "last updated date",
+      "name": "Last Updated Date",
+      "nameAr": "تاريخ آخر تحديث"
+    }
+  ],
+  "OwnersPlots": [
+    { "key": "project", "name": "Project Name", "nameAr": "اسم المشروع" },
+    { "key": "map", "name": "Map Name", "nameAr": "اسم المشروع " },
+    { "key": "properties", "name": "Properties", "nameAr": "عدد الملكيات" },
+    { "key": "total", "name": "Total Amount", "nameAr": "المبلغ الإجمالي" },
+    { "key": "remain", "name": "Remaining Amount", "nameAr": "المبلغ المتبقي" },
+    { "key": "status", "name": "Payment Status", "nameAr": "حالة الدفع" },
+    {
+      "key": "last updated by",
+      "name": "Last Updated By",
+      "nameAr": "آخر تحديث بواسطة"
+    },
+    {
+      "key": "last updated date",
+      "name": "Last Updated Date",
+      "nameAr": "تاريخ آخر تحديث"
+    }
+  ],
+  "referral": [
+    { "key": "number", "name": "Referral Code", "nameAr": "كود التحويل" },
+    { "key": "name", "name": "Name", "nameAr": "اسم العميل" },
+    { "key": "status", "name": "Status", "nameAr": "حالة التحويل" },
+    { "key": "createdAt", "name": "Created Date", "nameAr": "تاريخ الإنشاء" },
+    { "key": "expiredAt", "name": "Expiry Date", "nameAr": "تاريخ التحويل" }
+  ],
+  "interests": [
+    { "key": "name", "name": "Name", "nameAr": "الاسم" },
+    { "key": "email", "name": "Email", "nameAr": "البريد الإلكتروني" },
+    { "key": "phone", "name": "Phone", "nameAr": "الهاتف" },
+    { "key": "interest", "name": "Interests", "nameAr": "الاهتمام" },
+    { "key": "createdAt", "name": "Created At", "nameAr": "تم الإنشاء في" }
+  ],
+  "marketing_interests": [
+    {
+      "key": "name",
+      "name": "Name",
+      "nameAr": "الاسم"
+    },
+    {
+      "key": "phone",
+      "name": "Phone",
+      "nameAr": "الهاتف"
+    },
+    {
+      "key": "email",
+      "name": "Email",
+      "nameAr": "البريد الإلكتروني"
+    },
+    {
+      "key": "gender",
+      "name": "Gender",
+      "nameAr": "الجنس"
+    },
+    {
+      "key": "city",
+      "name": "City",
+      "nameAr": "المدينة"
+    },
+    {
+      "key": "specialty",
+      "name": "Specialty",
+      "nameAr": "التخصص"
+    },
+    {
+      "key": "bio",
+      "name": "Bio",
+      "nameAr": "السيرة الذاتية"
+    },
+    {
+      "key": "hasLicense",
+      "name": "Has License",
+      "nameAr": "لديه رخصة"
+    },
+    {
+      "key": "license",
+      "name": "License",
+      "nameAr": "الرخصة"
+    },
+    {
+      "key": "createdAt",
+      "name": "Created At",
+      "nameAr": "تم الإنشاء في"
+    }
+  ],
+  "newsletters": [
+    { "key": "email", "name": "Email", "nameAr": "البريد الإلكتروني" },
+    { "key": "createdAt", "name": "Created At", "nameAr": "تم الإنشاء في" }
+  ],
+  "scheduleCalls": [
+    { "key": "name", "name": "Name", "nameAr": "الاسم" },
+    { "key": "email", "name": "Email", "nameAr": "البريد الإلكتروني" },
+    { "key": "phone", "name": "Phone", "nameAr": "الهاتف" },
+    { "key": "timeSlot", "name": "Time Slot", "nameAr": "الفترة الزمنية" },
+    {
+      "key": "preferredContactMethod",
+      "name": "Preferred Contact Method",
+      "nameAr": "طريقة الاتصال المفضلة"
+    },
+    { "key": "isDone", "name": "Is Done", "nameAr": "مكتمل" },
+    { "key": "createdAt", "name": "Created At", "nameAr": "تم الإنشاء في" }
+  ],
+  "applications": [
+    { "key": "number", "name": "Number", "nameAr": "رقم الطلب" },
+    { "key": "project", "name": "Project Name", "nameAr": "اسم المشروع" },
+    {
+      "key": "customer",
+      "name": "Customer Name",
+      "nameAr": "اسم العميل"
+    },
+    { "key": "map", "name": "Map Name", "nameAr": " اسم الخريطة" },
+    { "key": "properties", "name": "Properties", "nameAr": "كود الوحدة " },
+    { "key": "status", "name": "Application Status", "nameAr": "حالة الطلب" },
+    { "key": "firstAction", "name": "First Action", "nameAr": "العمل الأول" },
+    {
+      "key": "last updated by",
+      "name": "Last Updated By",
+      "nameAr": "آخر تحديث بواسطة"
+    },
+    {
+      "key": "last updated date",
+      "name": "Last Updated Date",
+      "nameAr": "تاريخ آخر تحديث"
+    },
+    { "key": "created date", "name": "Created Date", "nameAr": "تاريخ الإنشاء" }
+  ],
+  "applicationProperty": [
+    { "key": "project", "name": "Project Name", "nameAr": "اسم المشروع" },
+    { "key": "properties", "name": "Properties", "nameAr": "كود الوحدة" },
+    { "key": "amount", "name": "Total Amount", "nameAr": " قيمة الوحدة" },
+    {
+      "key": "created by",
+      "name": "Created By",
+      "nameAr": "  التاريخ"
+    },
+    { "key": "created date", "name": "Created Date", "nameAr": "تاريخ " }
+  ],
+  "transactions": [
+    { "key": "application", "name": "Transactions ID", "nameAr": "رقم الطلب" },
+    { "key": "amount", "name": "Amount", "nameAr": "قيمة الوحدة" },
+    { "key": "status", "name": "Status", "nameAr": "الحالة " },
+    { "key": "updatedAt", "name": "Updated At", "nameAr": "تم التحديث في" },
+    { "key": "actionBy", "name": "Action By", "nameAr": "العمل بواسطة" },
+    { "key": "createdAt", "name": "Created At", "nameAr": "تم الإنشاء في" }
+  ],
+  "customerTransactions": [
+    { "key": "application", "name": "Number", "nameAr": "رقم الطلب" },
+    { "key": "type", "name": "Type", "nameAr": "نوع" },
+    { "key": "properties", "name": "Property", "nameAr": "عدد الملكيات" },
+    { "key": "amount", "name": "Amount", "nameAr": "قيمة الوحدة" }
+  ],
+  "customerApplications": [
+    { "key": "project", "name": "Project Name", "nameAr": "اسم المشروع" },
+    { "key": "map", "name": "Map Name", "nameAr": "اسم الخريطة" },
+    { "key": "properties", "name": "Properties", "nameAr": "عدد الملكيات" },
+    { "key": "status", "name": "Application Status", "nameAr": "حالة الطلب" },
+    { "key": "created date", "name": "Created Date", "nameAr": "تاريخ الإنشاء" }
+  ],
+  "customerPurchase": [
+    { "key": "application", "name": "Application ID", "nameAr": "معرف الطلب" },
+    { "key": "project", "name": "Project Name", "nameAr": "اسم المشروع" },
+    { "key": "map", "name": "Map Name", "nameAr": "اسم الخريطة" },
+    { "key": "properties", "name": "Properties", "nameAr": "عدد الملكيات" },
+    { "key": "amount", "name": "Total Amount", "nameAr": "المبلغ الإجمالي" },
+    { "key": "created date", "name": "Created Date", "nameAr": "تاريخ" },
+    {
+      "key": "purchase date",
+      "name": "Purchase Date",
+      "nameAr": "تاريخ الشراء"
+    }
+  ],
+  "customerSales": [
+    { "key": "application", "name": "Sales ID", "nameAr": "معرف الطلب" },
+    { "key": "project", "name": "Project Name", "nameAr": "اسم المشروع" },
+    { "key": "map", "name": "Map Name", "nameAr": "اسم الخريطة" },
+    {
+      "key": "properties",
+      "name": "Sold Properties",
+      "nameAr": "الملكيات المباعة"
+    },
+    { "key": "amount", "name": "Total Amount", "nameAr": "المبلغ الإجمالي" },
+    { "key": "status", "name": "Sale Status", "nameAr": "حالة البيع" },
+    { "key": "created date", "name": "Created Date", "nameAr": "تاريخ" }
+  ],
+  "UserExperience": [
+    { "key": "title", "name": "Job Title", "nameAr": "ملازمت کا عنوان" },
+    { "key": "company", "name": "Company", "nameAr": "الشركة" },
+    { "key": "location", "name": "Location", "nameAr": "موقع" },
+    { "key": "startDate", "name": "Start Date", "nameAr": "تاريخ البدء" },
+    { "key": "endDate", "name": "End Date", "nameAr": "تاريخ النهاية" },
+    { "key": "description", "name": "Description", "nameAr": "وصف" }
+  ],
+  "UserQualification": [
+    { "key": "title", "name": "Title", "nameAr": "ملازمت کا عنوان" },
+    { "key": "institute", "name": "Institute", "nameAr": "الشركة" },
+    {
+      "key": "location",
+      "name": "Location",
+      "nameAr": "موقع",
+      "style": { "width": "300px" }
+    },
+    { "key": "startDate", "name": "Start Date", "nameAr": "تاريخ البدء" },
+    { "key": "endDate", "name": "End Date", "nameAr": "تاريخ النهاية" },
+    { "key": "description", "name": "Description", "nameAr": "وصف" }
+  ],
+  "UserFamily": [
+    { "key": "name", "name": "Name", "nameAr": "ملازمت کا عنوان" },
+    { "key": "relation", "name": "Relation", "nameAr": "العلاقة" },
+    { "key": "date-birth", "name": "Date of Birth", "nameAr": "تاريخ الميلاد" }
+  ],
+  "userLogs": [
+    { "key": "action", "name": "Action", "nameAr": "عمل" },
+    { "key": "date", "name": "Date", "nameAr": "تاريخ" }
+  ],
+  "mapDevelopment": [
+    { "key": "status", "name": "Status", "nameAr": "الحالة" },
+    { "key": "title", "name": "Title", "nameAr": "عنوان" },
+    { "key": "description", "name": "Description", "nameAr": "وصف" },
+    { "key": "files", "name": "Files", "nameAr": "ملفات" },
+    { "key": "startDate", "name": "Start Date", "nameAr": "تاريخ البدء" },
+    {
+      "key": "expectedDate",
+      "name": "Expected Date",
+      "nameAr": "التاريخ المتوقع"
+    }
+  ],
+  "ownerShip": [
+    { "key": "owner", "name": "Owner", "nameAr": "مالك" },
+    { "key": "unitPrice", "name": "Price", "nameAr": "المبلغ الإجمالي" },
+    { "key": "status", "name": "Sale Status", "nameAr": "حالة البيع" },
+    { "key": "createdAt", "name": "Created At", "nameAr": "تم الإنشاء بواسطة" },
+    { "key": "updatedAt", "name": "Updated At", "nameAr": "تم التحديث في" }
+  ],
+  "invoice": [
+    { "key": "number", "name": "Number", "nameAr": "رقم" },
+    { "key": "createdAt", "name": "Created At", "nameAr": "تم الإنشاء في" },
+    { "key": "amount", "name": "Amount", "nameAr": "كمية" },
+    { "key": "viewedOn", "name": "Viewed On", "nameAr": "تم المشاهدة في" },
+    { "key": "dueAt", "name": "Due At", "nameAr": "مستحق في" },
+    { "key": "paidAt", "name": "Paid At", "nameAr": "دفعت في" },
+    { "key": "paidAmount", "name": "Paid Amount", "nameAr": "المبلغ المدفوع" }
+  ],
+  "invoiceSubmit": [
+    { "key": "project", "name": "Project Name", "nameAr": "اسم المشروع" },
+    { "key": "map", "name": "Map Name", "nameAr": "اسم الخريطة" },
+    { "key": "properties", "name": "Properties", "nameAr": "الملكيات" },
+    { "key": "amount", "name": "Total Amount", "nameAr": "المبلغ الإجمالي" },
+    {
+      "key": "created by",
+      "name": "Created By",
+      "nameAr": "تم الإنشاء بواسطة"
+    },
+    {
+      "key": "created date",
+      "name": "Created Date",
+      "nameAr": "تاريخ الإنشاء"
+    },
+    { "key": "proof", "name": "Upload Proof", "nameAr": "تحميل إثبات" }
+  ],
+  "applicationInvoice": [
+    { "key": "id", "name": "Invoice ID", "nameAr": "معرف الفاتورة" },
+    { "key": "amount", "name": "Amount", "nameAr": "المبلغ الإجمالي" },
+    { "key": "type", "name": "Type", "nameAr": "نوع" },
+    { "key": "viewedAt", "name": "Viewed At", "nameAr": "تم المشاهدة في" },
+    { "key": "dueAt", "name": "Due At", "nameAr": "مستحق في" },
+    { "key": "paidAmount", "name": "Paid Amount", "nameAr": "المبلغ المدفوع" },
+    { "key": "paidAt", "name": "Paid At", "nameAr": "دفعت في" },
+    { "key": "createdAt", "name": "Created At", "nameAr": "تم الإنشاء بواسطة" }
+  ],
+  "siteContentProject": [
+    {
+      "key": "number",
+      "name": "Number",
+      "nameAr": "رقم المشروع"
+    },
+    {
+      "key": "name",
+      "name": "Name",
+      "nameAr": "اسم المشروع",
+      "hasImage": true
+    },
+    { "key": "city", "name": "City", "nameAr": "المدينة" },
+    { "key": "area", "name": "Area", "nameAr": "المساحة" },
+    { "key": "status", "name": "Status", "nameAr": "الحالة" },
+    { "key": "visible", "name": "Visibility", "nameAr": "الرؤية" },
+    { "key": "actionBy", "name": "Action By", "nameAr": "العمل بواسطة" },
+    { "key": "createdAt", "name": "Created At", "nameAr": "تم الإنشاء في" },
+    { "key": "updatedAt", "name": "Updated At", "nameAr": "تم التحديث في" }
+  ]
+}

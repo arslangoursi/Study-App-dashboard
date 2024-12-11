@@ -1,0 +1,406 @@
+[lang="ar"] {
+  .invoice__container {
+    direction: rtl;
+  }
+}
+.invoice__container {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: 4em;
+  padding: 4em 2em;
+  font-size: 15px;
+}
+.invoice__container__header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.invoice__container__header__logo {
+  display: flex;
+}
+.invoice__container__header__logo img {
+  height: 30px;
+}
+.invoice__container__header__project__logo img {
+  height: 50px;
+}
+.theme__warper {
+  display: flex;
+}
+.invoice__container__body {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.invoice__container__body__title {
+  font-size: 1.7rem;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 1em;
+}
+.invoice__container__body__header {
+  display: flex;
+  justify-content: space-between;
+}
+.invoice__container__body__header__heading {
+  font-size: 1.7em;
+  font-weight: 600;
+}
+.invoice__container__body__header__details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.3em;
+}
+.invoice__container__body__header__details__entry {
+  text-align: right;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  color: var(--blue);
+}
+.invoice__container__body__header__details__entry__button {
+  background-color: var(--whiteShadow);
+  width: 25px;
+  height: 25px;
+  border: none;
+  color: var(--blue);
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+.invoice__container__body__header__details__entry__button.copied {
+  color: var(--golden);
+}
+.invoice__container__body__header__details__entry__button:hover {
+  background-color: var(--blue);
+  color: var(--whiteShadow);
+}
+.invoice__container__body__details {
+  display: flex;
+  justify-content: space-between;
+}
+.invoice__container__body__details__customer {
+  width: 40%;
+}
+.invoice__container__body__details__invoice {
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 1em;
+}
+.invoice__container__body__details__invoice__entry {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5em;
+  width: calc(25% - 0.5em);
+}
+.invoice__container__body__details__invoice__entry__heading,
+.invoice__container__body__details__customer__heading {
+  font-size: 0.8em;
+  font-weight: 500;
+  text-wrap: nowrap;
+  color: #808080;
+}
+.invoice__container__body__details__invoice__entry__value {
+  font-weight: 600;
+}
+.invoice__container__body__details__customer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.invoice__container__body__details__customer__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.invoice__container__body__table {
+  display: flex;
+  flex-direction: column;
+  overflow-x: auto;
+  width: 100%;
+}
+.invoice__container__body__table__header {
+  display: flex;
+  gap: 0.5em;
+  background-color: var(--whiteShadow);
+  padding: 1em;
+  border-radius: 10px;
+  min-width: fit-content;
+  width: 100%;
+}
+.invoice__container__body__table__header__entry {
+  min-width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0.5em;
+  text-wrap: nowrap;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.8em;
+  color: var(--blue);
+  width: 100%;
+}
+.invoice__container__body__table__body {
+  padding-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+}
+.invoice__container__body__table__body__row {
+  display: flex;
+  text-wrap: nowrap;
+  gap: 0.5em;
+  border-bottom: 1px solid var(--grey);
+  padding: 1.5em 1em;
+  min-width: fit-content;
+  width: 100%;
+}
+.invoice__container__body__table__body__row__entry {
+  min-width: 150px;
+  text-wrap: nowrap;
+  font-size: 0.8em;
+  text-align: center;
+  width: 100%;
+}
+.invoice__container__body__total {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.invoice__container__body__total img {
+  width: 100%;
+  max-width: 100px;
+}
+.invoice__container__body__total__row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 300px;
+  padding: 1em 0;
+  border-bottom: 1px solid var(--grey);
+}
+.invoice__container__body__total__row:last-child {
+  border: 1px solid transparent;
+}
+.invoice__container__body__total__row__value {
+  font-weight: bold;
+  font-size: 1em;
+}
+.invoice__container__submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5em;
+}
+.invoice__container__submit__file {
+  width: 300px;
+}
+.invoice__container__body__info {
+  background-color: var(--golden);
+  color: black;
+  border-radius: 40px;
+  padding: 1em 2em;
+  text-align: center;
+}
+.invoice__container__body__info a {
+  color: inherit;
+}
+.invoice__container__submit__btn {
+  background-color: var(--golden);
+  color: black;
+  border-radius: 50px;
+  width: 300px;
+  box-shadow: var(--shadow);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  white-space: nowrap;
+  line-height: 100%;
+  font-weight: 600;
+  text-decoration: none;
+}
+.invoice__container__submit__btn:hover {
+  background-color: var(--goldenDark);
+}
+.invoice__container__terms {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.invoice__container__terms__popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.invoice__container__terms__popup__content {
+  background-color: var(--whiteShadow);
+  padding: 2em;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+}
+.invoice__container__terms__popup__content__heading {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-bottom: 1em;
+}
+.invoice__container__terms__popup__content__info {
+  font-size: 0.8em;
+  color: var(--blue);
+  margin-bottom: 1em;
+}
+[lang="ar"] .invoice__container__terms__popup__button {
+  left: 1em;
+  right: auto;
+}
+.invoice__container__terms__popup__button {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  cursor: pointer;
+  background-color: var(--white);
+  color: var(--blue);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+}
+.invoice__container__terms__popup__button svg {
+  width: 20px;
+  height: 20px;
+}
+.invoice__container__terms__popup__button:hover {
+  background-color: var(--lightGrey);
+}
+.invoice__container__terms__checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  user-select: none;
+}
+.invoice__container__terms__checkbox input {
+  position: relative;
+}
+.invoice__container__terms__checkbox input::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--blue);
+  border-radius: 5px;
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.invoice__container__terms__checkbox input:checked::after {
+  content: "✔";
+  background-color: var(--blue);
+  color: var(--white);
+}
+.invoice__container__terms__checkbox label {
+  font-size: 0.8em;
+  font-weight: 500;
+  color: var(--blue);
+}
+.invoice__container__terms__checkbox label span {
+  margin: 0 0.5em;
+  color: var(--golden);
+  text-decoration: underline;
+  cursor: pointer;
+}
+.invoice__project__logo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.invoice__project__logo__link a {
+  color: var(--blue);
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.invoice__project__logo__link a:hover {
+  color: var(--golden);
+  text-decoration: underline;
+}
+.invoice__container__body__property__img {
+  height: 450px;
+  width: 100%;
+}
+.invoice__container__body__property__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.invoice__container__bank__details {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1em;
+}
+@media (max-width: 768px) {
+  .invoice__container__body__details__invoice__entry {
+    width: calc(50% - 0.5em);
+  }
+  .invoice__container__submit__file {
+    width: 100%;
+  }
+  .invoice__container__submit {
+    flex-direction: column;
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .invoice__container__submit__btn {
+    width: calc(100% - 1em);
+  }
+}
+@media (max-width: 500px) {
+  .invoice__container__body__details {
+    flex-direction: column;
+    gap: 4em;
+  }
+  .invoice__container__body__details__customer,
+  .invoice__container__body__details__invoice {
+    width: 100%;
+  }
+  .invoice__container__body__details__invoice__entry {
+    align-items: flex-start;
+  }
+  .invoice__container__bank__details {
+    flex-direction: column;
+  }
+}

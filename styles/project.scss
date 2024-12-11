@@ -1,0 +1,109 @@
+.property__edit__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+  position: relative;
+  border-radius: 10px;
+}
+.property__edit__container__info {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  background-color: var(--whiteShadow);
+  box-shadow: var(--shadow);
+  padding: 1.5em;
+  border-radius: 10px;
+}
+.property__edit__container__info__header {
+  font-size: 1em;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.property__edit__container__info__entries {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.property__edit__container__info__entries__row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1em;
+  width: 100%;
+}
+.property__edit__container__info__entries__row__entry {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 0.5em;
+}
+.property__edit__container__info__entries__row__entry__delete {
+  display: flex;
+  background-color: var(--white);
+  color: var(--lightBlue);
+  border: 1px solid transparent;
+  outline: none;
+  cursor: pointer;
+  border-radius: 100px;
+  padding: 1em;
+}
+.property__edit__container__info__entries__row__entry__delete:hover {
+  border: 1px solid var(--golden);
+  color: var(--golden);
+}
+.property__edit__container__info__header__btn {
+  background-color: var(--golden);
+  color: black;
+  padding: 0.5em 2.5em;
+  border-radius: 50px;
+  box-shadow: var(--shadow);
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  height: 35px;
+  transition: 300ms ease-in-out;
+}
+.property__edit__container__info__header__btn:hover {
+  background-color: transparent;
+  transition: 300ms ease-in-out;
+  border: 1px solid var(--golden);
+}
+.property__edit__container__save {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.property__edit__container__save__btn {
+  background-color: var(--golden);
+  color: black;
+  padding: 0.5em 1.5em;
+  border-radius: 50px;
+  box-shadow: var(--shadow);
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  height: 38px;
+  min-width: 155px;
+  transition: 300ms ease-in-out;
+}
+.property__edit__container__save__btn:hover {
+  background-color: transparent;
+  transition: 300ms ease-in-out;
+  border: 1px solid var(--golden);
+}
+@media (max-width: 1000px) {
+  .property__edit__container__info__entries__row {
+    flex-direction: column;
+  }
+}

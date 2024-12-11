@@ -1,0 +1,117 @@
+.dream__section {
+  background-color: rgb(255 184 61 / 16%);
+  border-radius: 30px;
+  padding: 2em 0;
+  padding-bottom: 0;
+  padding-right: 2em;
+  width: 100%;
+  margin-top: 1em;
+}
+.luxury__home__content__left {
+  width: 50%;
+}
+.luxury__home__content__right {
+  width: 50%;
+}
+.luxury__home__content__left__image {
+  height: 100%;
+  width: 100%;
+  max-height: 700px;
+}
+.luxury__home__content__left__image img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.luxury__home__content__right__content__links {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  margin-top: 1em;
+}
+.luxury__home__content__right__content__name {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+  color: #c5852d;
+}
+.luxury__home__content__right__content__links__link {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  border: 1px solid #000000;
+  border-radius: 50px;
+  padding: 1em;
+  cursor: pointer;
+  width: 200px;
+  transition: all 0.3s ease-in-out;
+}
+[lang="ar"] .luxury__home__content__right__content__links__link {
+  direction: rtl;
+}
+.luxury__home__content__right__content__links__link:hover {
+  background-color: #c2832c;
+  border: 1px solid #c2832c;
+  color: #fff;
+}
+.luxury__home__content__right__content__links__link:hover
+  .luxury__home__content__right__content__links__link
+  svg
+  * {
+  stroke: #fff;
+  fill: #fff;
+}
+.luxury__home__content__right__content__links__link__text {
+  font-size: 10px;
+}
+.luxury__home__content__right__content__links__link__text > div {
+  font-size: 16px;
+  font-weight: 600;
+}
+.luxury__home__content__right__content__links__downloads {
+  border: none;
+}
+.luxury__home__content__right__content__links__downloads
+  .luxury__home__content__right__content__links__link__text {
+  border: none;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.luxury__home__content__right__content__links__downloads
+  .luxury__home__content__right__content__links__link__text
+  span {
+  position: relative;
+}
+.luxury__home__content__right__content__links__downloads
+  .luxury__home__content__right__content__links__link__text
+  span::before {
+  position: absolute;
+  content: "";
+  left: -10px;
+  top: 35%;
+  height: 5px;
+  width: 5px;
+  border-radius: 3px;
+  background-color: black;
+}
+.luxury__home__content__right__content__links__downloads:hover {
+  background-color: transparent;
+  border: none;
+}
+[lang="ar"] .luxury__home__content__right__content {
+  direction: rtl;
+}
+@media (width < 1000px) {
+  .dream__section .luxury__home__content {
+    align-items: center;
+    padding: 2em;
+  }
+  .dream__section .luxury__home__content__right {
+    width: 100%;
+  }
+}
+@media (width < 550) {
+  .dream__section .luxury__home__content__left__image img {
+    height: 500px;
+  }
+}
