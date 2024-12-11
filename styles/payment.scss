@@ -1,0 +1,99 @@
+.payment__container {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: 1em;
+  padding: 2em 1.5em;
+}
+.payment__container__header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.payment__container__header__logo {
+  display: flex;
+}
+.payment__container__header__logo img {
+  height: 30px;
+}
+.payment__container__card {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-top: 2em;
+  background-color: var(--whiteShadow);
+  padding: 2em;
+  border-radius: 10px;
+  flex-wrap: wrap;
+}
+.payment__container__card__header {
+  display: flex;
+  font-size: 1.3em;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+.payment__container__card__detail {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1em;
+  width: 100%;
+}
+.payment__container__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2em;
+}
+.payment__container__left {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 1em;
+  font-weight: 400;
+  background-color: var(--whiteShadow);
+  padding: 2em;
+  border-radius: 10px;
+}
+.payment__container__left span {
+  display: flex;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+.payment__container__right {
+  display: flex;
+}
+.payment__container__right__btn {
+  background-color: var(--golden);
+  color: black;
+  padding: 0.5em 4em;
+  border-radius: 50px;
+  box-shadow: var(--shadow);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  height: 38px;
+  white-space: nowrap;
+  line-height: 100%;
+  font-weight: 600;
+  text-decoration: none;
+  align-items: center;
+}
+.payment__container__right__btn:hover {
+  background-color: var(--goldenDark);
+}
+@media (max-width: 950px) {
+  .payment__container__card__detail {
+    flex-direction: column;
+  }
+}
+@media (max-width: 500px) {
+  .payment__container__bottom {
+    flex-direction: column;
+  }
+}

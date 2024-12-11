@@ -1,0 +1,157 @@
+.explore__project__section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 4em 2em;
+}
+.explore__project__section__content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 1300px;
+}
+.explore__project__section__content__heading {
+  text-align: center;
+  max-width: 500px;
+}
+.explore__project__section__content__info {
+  font-size: 20px;
+  text-align: center;
+}
+.explore__project__section__content__cards {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.explore__project__section__content__cards__card {
+  flex: 0 1 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 1em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  margin: 2em 0;
+}
+[lang="ar"] .explore__project__section__content__cards__card {
+  direction: rtl;
+}
+.explore__project__section__content__cards__card__content__image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 30px;
+}
+.explore__project__section__content__cards__card__content__buttons {
+  display: flex;
+  width: 100%;
+  gap: 5px;
+}
+.explore__project__section__content__cards__card__content__buttons__download {
+  background-color: #f5f5f5;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 80%;
+  color: #000;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.explore__project__section__content__cards__card__content__buttons__download:hover {
+  background-color: #c9892e;
+  color: white;
+}
+.explore__project__section__content__cards__card__content__buttons__download:hover
+  svg
+  * {
+  stroke: white;
+}
+.explore__project__section__content__cards__card__content__buttons__learn {
+  background-color: #c9892e;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.explore__project__section__content__cards__card__content__buttons__learn svg {
+  width: 20px;
+  height: 20px;
+}
+.explore__project__section__content__cards__card__content__buttons__learn:hover {
+  background-color: #f5f5f5;
+  color: #c9892e;
+}
+.explore__project__section__content__cards__card__content__buttons__learn:hover
+  svg
+  * {
+  stroke: #c9892e;
+}
+.explore__project__section__content__cards__card__content__heading {
+  font-size: 20px;
+  font-weight: 700;
+  color: rgba(30, 30, 30, 1);
+}
+.explore__project__section__content__cards__card__content__info {
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0.5em 0;
+  color: #606060;
+}
+@media (max-width: 768px) {
+  .explore__project__section__content__cards {
+    margin-top: 1em;
+  }
+  .explore__project__section__content__cards__card {
+    max-width: 48%;
+    margin: 0;
+    height: 100%;
+  }
+  .explore__project__section__content__cards__card__content__buttons__download {
+    width: 85%;
+    margin-right: 0.7em;
+  }
+}
+@media (max-width: 600px) {
+  .explore__project__section__content__cards__card {
+    max-width: 80%;
+    min-width: 80%;
+  }
+}
+@media (max-width: 480px) {
+  .explore__project__section__content__cards__card {
+    max-width: 90%;
+    min-width: 90%;
+  }
+}
+@media (max-width: 420px) {
+  .explore__project__section__content__cards__card {
+    max-width: 100%;
+    min-width: 100%;
+  }
+}
