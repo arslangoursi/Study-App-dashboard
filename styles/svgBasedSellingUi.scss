@@ -1,0 +1,640 @@
+.svg__based__selling__ui {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+}
+[lang="ar"] {
+  .svg__based__selling__ui {
+    direction: rtl;
+  }
+}
+.svg__based__selling__ui__loading {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    var(--whiteShadow) 25%,
+    var(--lightGrey) 50%,
+    var(--whiteShadow) 75%
+  );
+  background-size: 400% 400%;
+  animation: loading 1.5s infinite;
+}
+@keyframes loading {
+  0% {
+    background-position: 0 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+.svg__based__selling__ui__sidebar {
+  width: 40%;
+  min-width: 450px;
+  height: 100%;
+  display: flex;
+}
+.svg__based__selling__ui__sidebar__left {
+  min-width: 400px;
+  position: relative;
+  border-right: 1px solid rgba(#000000, 0.2);
+}
+.svg__based__selling__ui__sidebar__left__listing {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.svg__based__selling__ui__sidebar__left__listing__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+}
+.svg__based__selling__ui__sidebar__left__listing__header__title {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+.svg__based__selling__ui__sidebar__left__listing__header__actions {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+.svg__based__selling__ui__sidebar__left__listing__header__actions button {
+  background-color: var(--golden);
+  color: white;
+  padding: 0 1em;
+  height: 35px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+  border: none;
+}
+.svg__based__selling__ui__sidebar__left__listing__header__actions button:hover {
+  background-color: var(--goldenDark);
+}
+.svg__based__selling__ui__sidebar__left__listing__header__actions
+  button:has(svg) {
+  width: 35px;
+  padding: 0;
+}
+.svg__based__selling__ui__sidebar__left__listing__header__actions
+  button:has(svg)
+  svg {
+  width: 20px;
+  height: 20px;
+}
+.svg__based__selling__ui__sidebar__left,
+.svg__based__selling__ui__sidebar__right {
+  flex: 1;
+}
+.svg__based__selling__ui__sidebar__right {
+  padding: 0 1em;
+  overflow: auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  background-color: var(--filtersCardBg);
+}
+.svg__based__selling__ui__viewer__thumbnail {
+  width: 100%;
+  border-radius: 20px;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.svg__based__selling__ui__viewer__thumbnail svg {
+  border-radius: 20px;
+}
+.svg__based__selling__ui__viewer__thumbnail:hover {
+  opacity: 1;
+}
+.svg__based__selling__ui__viewer__thumbnail.active {
+  opacity: 1;
+}
+@keyframes blinking {
+  0% {
+    fill: #fff !important;
+    opacity: 0;
+  }
+  100% {
+    fill: #000 !important;
+    opacity: 1;
+  }
+}
+.svg__based__selling__ui__content {
+  flex: 1;
+  padding: 1em 0;
+  position: relative;
+  height: 100%;
+  background-color: var(--whiteShadow);
+}
+.svg__based__selling__ui__content__app__actions {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.158);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  overflow: hidden;
+  position: absolute;
+  left: 1.5em;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+.svg__based__selling__ui__content__app__actions__button {
+  background-color: transparent;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5em 1em;
+  border: none;
+  text-align: center;
+  align-items: center;
+  font-size: 0.75em;
+  max-width: 80px;
+  gap: 0.5em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.svg__based__selling__ui__content__app__actions__button:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.svg__based__selling__ui__content__app__actions__button__svg {
+  color: inherit;
+}
+.svg__based__selling__ui__content__app__actions__button__svg svg {
+  width: 22px;
+  height: 22px;
+}
+.svg__based__selling__ui__content__app__actions__button.active {
+  background-color: white;
+  color: black;
+}
+.svg__based__selling__ui__content__app__actions__button.active
+  .svg__based__selling__ui__content__app__actions__button__svg {
+  color: var(--goldenDark);
+}
+.svg__based__selling__ui__sidebar__left__listing__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  height: calc(100% - 4em);
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+.svg__based__selling__ui__sidebar__left__listing__content__list__header {
+  display: flex;
+  padding: 1em;
+  border-top: 1px solid var(--lightGrey);
+  border-bottom: 1px solid var(--lightGrey);
+  margin-bottom: 1em;
+  gap: 1em;
+  background-color: var(--whiteShadow);
+}
+.svg__based__selling__ui__sidebar__left__listing__content__list__header__entry {
+  width: calc((100% / 4) - 1em);
+}
+.svg__based__selling__ui__sidebar__left__listing__content__list__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding-top: 0;
+  height: calc(100vh - 5em);
+  overflow-y: auto;
+}
+.svg__based__selling__ui__sidebar__left__listing__content__list__content__entry {
+  display: flex;
+  gap: 1em;
+  padding: 0.5em 1em;
+  align-items: center;
+  border-bottom: 1px solid var(--lightGrey);
+  background-color: var(--white);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: none;
+  gap: 1em;
+}
+.svg__based__selling__ui__sidebar__left__listing__content__list__content__entry:hover {
+  background-color: var(--golden);
+}
+.svg__based__selling__ui__sidebar__left__listing__content__list__content__entry__column {
+  display: flex;
+  width: calc((100% / 4) - 1em);
+}
+.svg__based__selling__ui__sidebar__left__listing__content__list__content__entry__column__status {
+  padding: 0.5em 1em;
+  border-radius: 50px;
+  border-width: 1px;
+  border-style: solid;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 0.8em;
+}
+.svg__based__selling__ui__sidebar__left__listing__content__list__content__entry__column__status__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 0.5em;
+}
+.svg__based__selling__ui__sidebar__left__listing__content__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1em;
+  padding: 1em;
+}
+.svg__based__selling__ui__sidebar__left__listing__content__grid__entry {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  border-radius: 10px;
+  border: 1px solid var(--whiteShadow);
+  padding: 0;
+  background-color: var(--white);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+.svg__based__selling__ui__sidebar__left__listing__content__grid__entry:hover {
+  background-color: var(--whiteShadow);
+}
+.svg__based__selling__ui__sidebar__left__listing__content__grid__entry img {
+  width: 100%;
+  height: 150px;
+}
+.svg__based__selling__ui__sidebar__left__listing__content__grid__entry__details {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.svg__based__selling__ui__sidebar__left__listing__content__grid__entry__details__row {
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+.svg__based__selling__ui__sidebar__left__listing__content__grid__entry__details__row__entry {
+  width: calc((100% / 2) - 1em);
+  text-align: left;
+}
+.svg__based__selling__ui__sidebar__left__listing__content__grid__entry__details__row__entry:has(
+    .svg__based__selling__ui__sidebar__left__listing__content__grid__entry__details__row__entry__status
+  ) {
+  flex: 1;
+}
+.svg__based__selling__ui__sidebar__left__listing__content__grid__entry__details__row__entry__status {
+  padding: 1em;
+  border-radius: 50px;
+  border-width: 1px;
+  border-style: solid;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 0.8em;
+}
+.svg__based__selling__ui__sidebar__left__listing__content__grid__entry__details__row__entry__status__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 0.5em;
+}
+.svg__based__selling__ui__content__actions {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  top: 2em;
+  right: 1.5em;
+}
+.svg__based__selling__ui__content__actions .map__overlay__cart__button {
+  position: relative !important;
+  top: 0 !important;
+  right: 0 !important;
+  left: 0 !important;
+  bottom: 0 !important;
+}
+.svg__based__selling__ui__content__actions__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 38px;
+  width: 38px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: var(--blue);
+  color: var(--white);
+  border: none;
+  transition: all 0.3s ease-in-out;
+  z-index: 10;
+  border: none;
+}
+.svg__based__selling__ui__content__actions__button:hover {
+  background-color: var(--golden);
+  color: black;
+}
+.svg__based__selling__ui__content__actions__button.to__map {
+  position: absolute;
+  top: 2em;
+  left: 1.5em;
+}
+.svg__based__selling__ui__viewer {
+  flex: 1;
+  height: 100%;
+}
+.svg__based__selling__ui__viewer svg {
+  border-radius: 20px;
+}
+.apartment__svg__container__row {
+  width: 100%;
+  height: 100%;
+  background-color: var(--filtersCardBg);
+  padding: 1.5em;
+  color: black;
+  position: absolute;
+}
+.slide__filter__header {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.slide__filter__header__svg__warper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4em;
+}
+.filter__svg__entry {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.slide__filter__header__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.slide__filter__header__content__actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+.slide__filter__header__content__actions__status {
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 20px;
+}
+.slide__filter__header__content__actions__button {
+  background-color: var(--golden);
+  color: var(--blue);
+  padding: 0.5em 1em;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+  border: none;
+}
+.slide__filter__header__title {
+  font-size: 1em;
+  font-weight: 500;
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.slide__filter__header__btn {
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--blue);
+  background-color: #c5852d;
+  transition: 300ms ease-in-out;
+  height: 35px;
+  width: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  border: none;
+}
+.slide__filter__header__btn:hover {
+  background-color: #b3680d;
+}
+.slide__header__btn {
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 0.9em;
+  color: var(--blue);
+  border: none;
+}
+.slide__container__images {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  height: 100vh;
+  padding: 1em 0;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+.slide__container__images__img {
+  cursor: pointer;
+  border-radius: 12px;
+  aspect-ratio: 16/9;
+  width: 100%;
+  min-width: 150px;
+  object-fit: cover;
+}
+.slide__filter__price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #c5862d1f;
+  height: 40px;
+  width: 130px;
+  font-size: 0.9em;
+  border-radius: 20px;
+  color: #b3680d;
+  margin-top: 1em;
+}
+.slide__image__sale__img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 1em 0;
+}
+.slide__container__row__filter__btn__warper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slide__container__row__filter__btn {
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 0.9em;
+  color: var(--blue);
+  border: none;
+  background-color: var(--blue);
+  transition: 300ms ease-in-out;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  border: none;
+  font-size: 1em;
+}
+.slide__container__row__filter__btn:hover {
+  background-color: var(--golden);
+}
+.slide__tab__btn__warper {
+  width: 100%;
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.5em;
+}
+.slide__tab__btn {
+  flex: 1;
+  background: none;
+  border: none;
+  color: var(--blue);
+  background-color: var(--white);
+  font-size: 1em;
+  padding: 10px;
+  border-radius: 50px;
+  cursor: pointer;
+  text-align: center;
+  border-bottom: none;
+  transition: 300ms ease-in-out;
+  gap: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slide__tab__btn:hover {
+  color: var(--blue);
+}
+.slide__tab__btn.active {
+  background-color: var(--golden);
+}
+.slide__tab__property__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+  overflow-y: scroll;
+  height: calc(100% - 1.5em - 418px);
+  overflow-y: auto;
+  scrollbar-width: none;
+  padding: 1.5em 0;
+}
+.slide__tab__property__container__header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.slide__tab__property__entry {
+  display: flex;
+}
+.property__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--white);
+  padding: 10px 0;
+}
+.property__floor {
+  flex: 1;
+  color: var(--blue);
+  text-align: left;
+  gap: 0.4em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.property__unit {
+  flex: 1;
+  text-align: right;
+  color: var(--blue);
+}
+.apartment__svg__container__row__app__actions {
+  display: none;
+  gap: 0.5em;
+  white-space: nowrap;
+  margin-bottom: 1em;
+}
+.slide__property__heading {
+  font-size: 1.3em;
+  font-weight: 600;
+  color: var(--golden);
+}
+.apartment__svg__container__row__app__actions__button {
+  padding: 0.5em 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  background-color: var(--white);
+  color: var(--blue);
+  border: none;
+  gap: 0.5em;
+  cursor: pointer;
+}
+.apartment__svg__container__row__app__actions__button svg {
+  width: 15px;
+  height: 15px;
+}
+.apartment__svg__container__row__app__actions__button.active {
+  background-color: var(--golden);
+  color: white;
+}
+@media (width < 950px) {
+  .svg__based__selling__ui {
+    flex-direction: column-reverse;
+    height: 100%;
+  }
+  .svg__based__selling__ui__viewer {
+    height: 40%;
+    width: 100%;
+  }
+  .svg__based__selling__ui__sidebar {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column-reverse;
+    min-width: unset;
+  }
+  .svg__based__selling__ui__sidebar__right {
+    flex-direction: row;
+    height: fit-content;
+    width: 100%;
+    justify-content: center;
+  }
+  .svg__based__selling__ui__sidebar__left {
+    width: 100%;
+  }
+  .svg__based__selling__ui__content__actions {
+    right: 1em;
+  }
+  .svg__based__selling__ui__content__actions__button.to__map {
+    left: 1em;
+  }
+  .svg__based__selling__ui__content__app__actions {
+    display: none;
+  }
+  .apartment__svg__container__row__app__actions {
+    display: flex;
+  }
+}
